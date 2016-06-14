@@ -1,0 +1,5 @@
+purchases-service:
+  image: challenge/purchases-service
+  restart: always
+  ports:
+    - "15000:15000"
