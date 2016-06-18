@@ -1,4 +1,4 @@
-package pt.blip.challenge.service.purchases;
+package net.jpasimoes.service.purchases.impl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * The boot application class that defines the spring boot application.<br>
  * <br>
  *
- * @author jpasimoes
+ * Created by joao.simoes on 15/06/16.
  *
  */
 @SpringBootApplication

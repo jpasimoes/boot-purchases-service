@@ -4,11 +4,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>pt.blip.challenge.service</groupId>
+        <groupId>net.jpasimoes.purchases</groupId>
         <artifactId>purchases-infrastructure</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>pt.blip.challenge.service.purchases</groupId>
+    <groupId>net.jpasimoes.service.purchases</groupId>
     <artifactId>purchases-service</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>purchases-service</name>
@@ -16,7 +16,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <main.class>pt.blip.challenge.service.purchases.Application</main.class>
+        <main.class>net.jpasimoes.service.purchases.impl.Application</main.class>
 
         <docker.image.name>purchases-service</docker.image.name>
         <docker.instance.name>purchases-service</docker.instance.name>
@@ -49,6 +49,19 @@
             <artifactId>spring-boot-starter-log4j</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>net.jpasimoes.service.purchases.api</groupId>
+            <artifactId>purchases-service-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.jpasimoes.service.purchases.dtos</groupId>
+            <artifactId>purchases-service-dtos</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+        </dependency>
 
         <!-- Test Dependencies -->
         <dependency>
@@ -79,6 +92,16 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path-assert</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
