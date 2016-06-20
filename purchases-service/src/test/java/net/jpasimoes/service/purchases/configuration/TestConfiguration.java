@@ -4,6 +4,8 @@ import net.jpasimoes.service.purchases.api.dao.PurchasesDao;
 import net.jpasimoes.service.purchases.impl.controller.PurchasesController;
 import net.jpasimoes.service.purchases.impl.service.PurchasesService;
 import org.dozer.Mapper;
+import org.springframework.boot.actuate.metrics.CounterService;
+import org.springframework.boot.actuate.metrics.GaugeService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -33,6 +35,16 @@ public class TestConfiguration {
     @Bean
     public Mapper mapper(){
         return mock(Mapper.class);
+    }
+
+    @Bean
+    public CounterService counterService(){
+        return mock(CounterService.class);
+    }
+
+    @Bean
+    public GaugeService gaugeService(){
+        return mock(GaugeService.class);
     }
 
 }
